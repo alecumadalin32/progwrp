@@ -1,0 +1,18 @@
+﻿  initonce.c
+K:\progwrp\progwrp\initonce.c(43,17): warning C4047: 'function': 'volatile LONG *' differs in levels of indirection from 'PVOID *'
+K:\progwrp\progwrp\initonce.c(43,17): warning C4024: '_InterlockedOr': different types for formal and actual parameter 1
+K:\progwrp\progwrp\initonce.c(52,18): warning C4047: 'function': 'volatile LONG *' differs in levels of indirection from 'PVOID *'
+K:\progwrp\progwrp\initonce.c(52,18): warning C4024: '_InterlockedOr': different types for formal and actual parameter 1
+K:\progwrp\progwrp\initonce.c(59,14): warning C4047: '=': 'LPVOID' differs in levels of indirection from 'unsigned long'
+K:\progwrp\progwrp\initonce.c(86,13): warning C4047: '=': 'LPVOID' differs in levels of indirection from 'unsigned long'
+K:\progwrp\progwrp\initonce.c(101,18): warning C4047: 'function': 'volatile LONG *' differs in levels of indirection from 'PVOID *'
+K:\progwrp\progwrp\initonce.c(101,18): warning C4024: '_InterlockedOr': different types for formal and actual parameter 1
+K:\progwrp\progwrp\initonce.c(133,16): warning C4047: 'function': 'volatile LONG *' differs in levels of indirection from 'PVOID *'
+K:\progwrp\progwrp\initonce.c(133,16): warning C4024: '_InterlockedOr': different types for formal and actual parameter 1
+K:\progwrp\progwrp\initonce.c(137,17): warning C4047: 'function': 'volatile LONG *' differs in levels of indirection from 'PVOID *'
+K:\progwrp\progwrp\initonce.c(137,17): warning C4024: '_InterlockedOr': different types for formal and actual parameter 1
+K:\progwrp\progwrp\initonce.c(137,35): warning C4047: 'function': 'LONG' differs in levels of indirection from 'LPVOID'
+K:\progwrp\progwrp\initonce.c(137,35): warning C4024: '_InterlockedOr': different types for formal and actual parameter 2
+     Creating library K:\progwrp\Release\progwrp.lib and object K:\progwrp\Release\progwrp.exp
+  LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+  progwrp.vcxproj -> K:\progwrp\Release\progwrp.dll

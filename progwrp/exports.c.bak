@@ -1,0 +1,283 @@
+
+#include "export.h"
+
+// Parameters are there to ensure proper linking on x86. Only built-in types are used as this
+// source file is purposely isolated from the common headers to avoid conflicts
+
+__declspec(dllexport) void __stdcall TryAcquireSRWLockExclusive(void* SRWLock)
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_TryAcquireSRWLockExclusive
+	}
+#else
+	g_pfn_TryAcquireSRWLockExclusive();
+#endif
+}
+
+__declspec(dllexport) void __stdcall TryAcquireSRWLockShared(void* SRWLock)
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_TryAcquireSRWLockShared
+	}
+#else
+	g_pfn_TryAcquireSRWLockShared();
+#endif
+}
+
+__declspec(dllexport) void __stdcall AcquireSRWLockExclusive(void* SRWLock)
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_AcquireSRWLockExclusive
+	}
+#else
+	g_pfn_AcquireSRWLockExclusive();
+#endif
+}
+
+__declspec(dllexport) void __stdcall AcquireSRWLockShared(void* SRWLock)
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_AcquireSRWLockShared
+	}
+#else
+	g_pfn_AcquireSRWLockShared();
+#endif
+}
+
+__declspec(dllexport) void __stdcall ReleaseSRWLockExclusive(void* SRWLock)
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_ReleaseSRWLockExclusive
+	}
+#else
+	g_pfn_ReleaseSRWLockExclusive();
+#endif
+}
+
+
+__declspec(dllexport) void __stdcall ReleaseSRWLockShared(void* SRWLock)
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_ReleaseSRWLockShared
+	}
+#else
+	g_pfn_ReleaseSRWLockShared();
+#endif
+}
+
+__declspec(dllexport) void __stdcall InitializeSRWLock(void* SRWLock)
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_InitializeSRWLock
+	}
+#else
+	g_pfn_InitializeSRWLock();
+#endif
+}
+
+
+__declspec(dllexport) void __stdcall DecodePointer(void* Ptr)
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_DecodePointer
+	}
+#else
+	g_pfn_DecodePointer();
+#endif
+}
+
+__declspec(dllexport) void __stdcall EncodePointer(void* Ptr)
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_DecodePointer
+	}
+#else
+	g_pfn_DecodePointer();
+#endif
+}
+
+__declspec(dllexport) void __stdcall GetMaximumProcessorCount()
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_GetMaximumProcessorCount
+	}
+#else
+	g_pfn_GetMaximumProcessorCount();
+#endif
+}
+
+__declspec(dllexport) void __stdcall GetMaximumProcessorGroupCount()
+{
+#ifdef _M_IX86
+	_asm
+	{
+		pop ebp
+		jmp g_pfn_GetMaximumProcessorGroupCount
+	}
+#else
+	g_pfn_GetMaximumProcessorGroupCount();
+#endif
+}
+
+__declspec(dllexport) void __stdcall GetLogicalProcessorInformationEx(void* v1, void* v2, void* v3)
+{
+	g_pfn_GetLogicalProcessorInformationEx();
+}
+
+__declspec(dllexport) void __stdcall GetThreadGroupAffinity(void* v1, void* v2)
+{
+	g_pfn_GetThreadGroupAffinity();
+}
+
+__declspec(dllexport) void __stdcall PowerCreateRequest(void* v1, void* v2)
+{
+	g_pfn_PowerCreateRequest();
+}
+
+__declspec(dllexport) void __stdcall PowerSetRequest(void* v1)
+{
+	g_pfn_PowerSetRequest();
+}
+
+__declspec(dllexport) void __stdcall PowerClearRequest(void* v1, void* v2)
+{
+	g_pfn_PowerClearRequest();
+}
+
+__declspec(dllexport) void __stdcall ResolveLocaleName(void* v1, void* v2, void* v3)
+{
+	g_pfn_ResolveLocaleName();
+}
+
+__declspec(dllexport) void __stdcall NtOpenKeyEx(void* v1, void* v2, void* v3, void* v4)
+{
+   g_pfn_NtOpenKeyEx();
+}
+
+__declspec(dllexport) void __stdcall WerRegisterRuntimeExceptionModule(void* v1, void* v2)
+{
+   g_pfn_WerRegisterRuntimeExceptionModule();
+}
+
+__declspec(dllexport) void __stdcall SHGetPropertyStoreForWindow(void* v1, void* v2, void* v3)
+{
+   g_pfn_SHGetPropertyStoreForWindow();
+}
+
+__declspec(dllexport) void __stdcall RegisterTouchWindow(void* v1, void* v2)
+{
+   g_pfn_RegisterTouchWindow();
+}
+
+__declspec(dllexport) void __stdcall GetTouchInputInfo()
+{
+   g_pfn_GetTouchInputInfo();
+}
+
+__declspec(dllexport) void __stdcall QueryDisplayConfig(void* v1, void* v2, void* v3, void* v4,
+											   void* v5, void* v6)
+{
+   g_pfn_QueryDisplayConfig();
+}
+
+__declspec(dllexport) void __stdcall DisplayConfigGetDeviceInfo(void* v1)
+{
+   g_pfn_DisplayConfigGetDeviceInfo();
+}
+
+__declspec(dllexport) void __stdcall DisplayConfigSetDeviceInfo(void* v1)
+{
+   g_pfn_DisplayConfigSetDeviceInfo();
+}
+
+__declspec(dllexport) void __stdcall GetDisplayConfigBufferSizes(void* v1, void* v2, void* v3)
+{
+   g_pfn_GetDisplayConfigBufferSizes();
+}
+
+__declspec(dllexport) void __stdcall CloseTouchInputHandle(void* v1)
+{
+   g_pfn_CloseTouchInputHandle();
+}
+
+__declspec(dllexport) void __stdcall CloseGestureInfoHandle()
+{
+   g_pfn_CloseGestureInfoHandle();
+}
+
+__declspec(dllexport) void __stdcall GetGestureInfo()
+{
+   g_pfn_GetGestureInfo();
+}
+
+__declspec(dllexport) void __stdcall SetGestureConfig()
+{
+   g_pfn_SetGestureConfig();
+}
+
+__declspec(dllexport) void __stdcall UnregisterTouchWindow()
+{
+   g_pfn_UnregisterTouchWindow();
+}
+
+__declspec(dllexport) void __stdcall IsTouchWindow()
+{
+   g_pfn_IsTouchWindow();
+}
+
+__declspec(dllexport) void __stdcall CreateRemoteThreadEx(void* v1, void* v2, void* v3, void* v4,
+											   void* v5, void* v6, void* v7, void* v8)
+{
+   g_pfn_CreateRemoteThreadEx();
+}
+
+__declspec(dllexport) void __stdcall GetModuleInformation(void* v1, void* v2, void* v3, void* v4)
+{
+	g_pfn_GetModuleInformation();
+}
+
+__declspec(dllexport) void __stdcall GetProcessMemoryInfo(void* v1, void* v2, void* v3)
+{
+	g_pfn_GetProcessMemoryInfo();
+}
+
+__declspec(dllexport) void __stdcall FindFirstFileExW(void* v1, void* v2, void* v3, void* v4,
+											   void* v5, void* v6)
+{
+	g_pfn_FindFirstFileExW();
+}
+
+__declspec(dllexport) void __stdcall SleepConditionVariableSRW(void* v1, void* v2, void* v3, void* v4)
+{
+	g_pfn_SleepConditionVariableSRW();
+}
